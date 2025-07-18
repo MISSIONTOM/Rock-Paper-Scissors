@@ -15,6 +15,9 @@ function playRound(humanChoice, computerChoice){
             computerScore++;
             console.log("Computer Wins!");
         }
+        else{
+            console.log("Draw!")
+        }
         
     }
     else if(humanChoice==="paper" ){
@@ -25,6 +28,9 @@ function playRound(humanChoice, computerChoice){
         else if(computerChoice==="scissors"){
             computerScore++;
             console.log("Computer Wins!");
+        }
+        else{
+            console.log("Draw!")
         }
         
     }
@@ -37,6 +43,9 @@ function playRound(humanChoice, computerChoice){
             computerScore++;
             console.log("Computer Wins!");
         }
+        else{
+            console.log("Draw!")
+        }
         
     }
 
@@ -45,6 +54,8 @@ function playRound(humanChoice, computerChoice){
 
 function playGame(){
     for(let i=0; i<5; i++){
+        const humanChoice = getHumanChoice().toLowerCase();
+        const computerChoice = getComputerChoice().toLowerCase();
         playRound(humanChoice, computerChoice);
     }
     console.log("Human Score:" + humanScore);
@@ -73,7 +84,6 @@ function getHumanChoice(){
     return choice;
 }
 
-const humanChoice = getHumanChoice().toLowerCase();
-const computerChoice = getComputerChoice().toLowerCase();
+
 
 playGame();
