@@ -1,0 +1,10 @@
+#game{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px ;
+}
+
+#result{
+    border: 2px solid black;
+    
+}
